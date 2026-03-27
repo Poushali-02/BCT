@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Home - Minimal Django</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Welcome to my page</h1>
-    <p>This is home page</p>
+    <div class="card">
+        <header>Welcome to Django Home</header>
+        <p>This is a clean and minimal home page example for the Django project.</p>
+        <a href="/about" class="btn">About</a>
+        <a href="/contacts" class="btn">Contact</a>
+        <a href="/services" class="btn">Services</a>
+    </div>
 </body>
 </html>
