@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block extra_head %}<link rel="stylesheet" href="{% static 'css/services/services.css' %}">{% endblock extra_head %}
+
+{% block content %}
+<header>Our Services</header>
+    <p>We offer a range of services to help you succeed. Here are a few of them:</p>
+    <ul style="text-align:left; max-width:320px; margin:0 auto 18px auto; padding-left:18px; color:#444; font-size:1.08rem;">
+        <li>Web Development</li>
+        <li>Consulting</li>
+        <li>Support & Maintenance</li>
+    </ul>
+    <a href="/" class="btn">Back to Home</a>
+{% endblock content %}

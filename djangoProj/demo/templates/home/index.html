@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block extra_head %}<link rel="stylesheet" href="{% static 'css/home/style.css' %}">{% endblock extra_head %}
+
+{% block content %}
+<header>Welcome to Minimal Django Home</header>
+<p>This is a clean and minimal home page example for your Django project. Start building your app from here!</p>
+<a href="/about" class="btn">About Us</a>
+<a href="/services" class="btn">Services</a>
+<a href="/contacts" class="btn">Contacts</a>
+{% endblock content %}

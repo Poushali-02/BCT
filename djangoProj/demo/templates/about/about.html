@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block extra_head %}<link rel="stylesheet" href="{% static 'css/about/about.css' %}">{% endblock extra_head %}
+
+{% block content %}
+<header>About This Project</header>
+<p>This is a simple about page for your Django project. You can describe your project, its purpose, or your team here.</p>
+<a href="/" class="btn">Back to Home</a>
+{% endblock content %}

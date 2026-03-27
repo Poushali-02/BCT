@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block extra_head %}<link rel="stylesheet" href="{% static 'css/contacts/contacts.css' %}">{% endblock extra_head %}
+
+{% block content %}
+<header>Contact Us</header>
+<p>You can reach us at <a href="mailto:info@example.com">info@example.com</a> or fill out the contact form below.</p>
+<form style="margin: 0 auto; max-width: 320px; text-align: left;">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" style="width:100%;margin-bottom:10px;"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" style="width:100%;margin-bottom:10px;"><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="3" style="width:100%;margin-bottom:14px;"></textarea><br>
+    <button type="submit" class="btn" style="width:100%;">Send</button>
+</form>
+<a href="/" class="btn" style="margin-top:18px;">Back to Home</a>
+    
+{% endblock content %}
