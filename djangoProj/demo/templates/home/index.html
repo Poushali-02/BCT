@@ -2,14 +2,157 @@
 
 {% load static %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}Home - ShopHub E-Commerce{% endblock title %}
 
 {% block extra_head %}<link rel="stylesheet" href="{% static 'css/home/style.css' %}">{% endblock extra_head %}
 
 {% block content %}
-<header>Welcome to Minimal Django Home</header>
-<p>This is a clean and minimal home page example for your Django project. Start building your app from here!</p>
-<a href="/about" class="btn">About Us</a>
-<a href="/services" class="btn">Services</a>
-<a href="/contacts" class="btn">Contacts</a>
+<!-- Hero Banner -->
+<section class="hero">
+	<div class="hero-content">
+		<h1>Summer Collection 2024</h1>
+		<p>Discover amazing products at unbeatable prices</p>
+		<a href="/products" class="btn btn-primary btn-large">Shop Now</a>
+	</div>
+	<div class="hero-image">
+		<div class="hero-placeholder">🎁</div>
+	</div>
+</section>
+
+<!-- Promotional Banner -->
+<section class="promo-banner">
+	<div class="promo-left">
+		<span class="promo-badge">Limited Offer</span>
+		<h2>Up to 50% OFF</h2>
+		<p>On selected items</p>
+		<a href="/products" class="btn btn-secondary">View Deals</a>
+	</div>
+	<div class="promo-right">
+		<div class="promo-placeholder">💰</div>
+	</div>
+</section>
+
+<!-- Categories -->
+<section class="categories">
+	<h2>Shop by Category</h2>
+	<div class="category-grid">
+		<div class="category-card">
+			<div class="category-icon">👕</div>
+			<h3>Clothing</h3>
+			<p>Latest Fashion</p>
+		</div>
+		<div class="category-card">
+			<div class="category-icon">👟</div>
+			<h3>Shoes</h3>
+			<p>Quality Footwear</p>
+		</div>
+		<div class="category-card">
+			<div class="category-icon">💻</div>
+			<h3>Electronics</h3>
+			<p>Tech Gadgets</p>
+		</div>
+		<div class="category-card">
+			<div class="category-icon">🏠</div>
+			<h3>Home & Garden</h3>
+			<p>Decor & Furniture</p>
+		</div>
+	</div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+	<h2>Featured Products</h2>
+	<div class="products-grid">
+		<div class="product-card">
+			<div class="product-image">🎧</div>
+			<div class="product-info">
+				<h3>Wireless Headphones</h3>
+				<div class="rating">⭐⭐⭐⭐⭐ (128 reviews)</div>
+				<div class="price">
+					<span class="old-price">$79.99</span>
+					<span class="current-price">$49.99</span>
+				</div>
+				<button class="btn btn-add-cart">Add to Cart</button>
+			</div>
+		</div>
+
+		<div class="product-card">
+			<div class="product-image">⌚</div>
+			<div class="product-info">
+				<h3>Smart Watch</h3>
+				<div class="rating">⭐⭐⭐⭐⭐ (256 reviews)</div>
+				<div class="price">
+					<span class="old-price">$199.99</span>
+					<span class="current-price">$149.99</span>
+				</div>
+				<button class="btn btn-add-cart">Add to Cart</button>
+			</div>
+		</div>
+
+		<div class="product-card">
+			<div class="product-image">📱</div>
+			<div class="product-info">
+				<h3>Phone Case Pro</h3>
+				<div class="rating">⭐⭐⭐⭐ (89 reviews)</div>
+				<div class="price">
+					<span class="old-price">$29.99</span>
+					<span class="current-price">$19.99</span>
+				</div>
+				<button class="btn btn-add-cart">Add to Cart</button>
+			</div>
+		</div>
+
+		<div class="product-card">
+			<div class="product-image">🎮</div>
+			<div class="product-info">
+				<h3>Gaming Controller</h3>
+				<div class="rating">⭐⭐⭐⭐⭐ (342 reviews)</div>
+				<div class="price">
+					<span class="old-price">$59.99</span>
+					<span class="current-price">$39.99</span>
+				</div>
+				<button class="btn btn-add-cart">Add to Cart</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us">
+	<h2>Why Choose ShopHub?</h2>
+	<div class="benefits-grid">
+		<div class="benefit">
+			<div class="benefit-icon">🚚</div>
+			<h3>Fast Shipping</h3>
+			<p>Free delivery on orders over $50</p>
+		</div>
+		<div class="benefit">
+			<div class="benefit-icon">🔒</div>
+			<h3>Secure Payment</h3>
+			<p>100% safe & encrypted transactions</p>
+		</div>
+		<div class="benefit">
+			<div class="benefit-icon">↩️</div>
+			<h3>Easy Returns</h3>
+			<p>30-day money back guarantee</p>
+		</div>
+		<div class="benefit">
+			<div class="benefit-icon">💬</div>
+			<h3>24/7 Support</h3>
+			<p>Always here to help you</p>
+		</div>
+	</div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+	<div class="newsletter-content">
+		<h2>Subscribe to Our Newsletter</h2>
+		<p>Get exclusive deals and updates delivered to your inbox</p>
+		<form class="newsletter-form">
+			<input type="email" placeholder="Enter your email" required>
+			<button type="submit" class="btn btn-primary">Subscribe</button>
+		</form>
+	</div>
+</section>
 {% endblock content %}

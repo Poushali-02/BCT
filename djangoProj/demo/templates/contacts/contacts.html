@@ -2,22 +2,169 @@
 
 {% load static %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}Contact ShopHub - Customer Support{% endblock title %}
 
 {% block extra_head %}<link rel="stylesheet" href="{% static 'css/contacts/contacts.css' %}">{% endblock extra_head %}
 
 {% block content %}
-<header>Contact Us</header>
-<p>You can reach us at <a href="mailto:info@example.com">info@example.com</a> or fill out the contact form below.</p>
-<form style="margin: 0 auto; max-width: 320px; text-align: left;">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" style="width:100%;margin-bottom:10px;"><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" style="width:100%;margin-bottom:10px;"><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="3" style="width:100%;margin-bottom:14px;"></textarea><br>
-    <button type="submit" class="btn" style="width:100%;">Send</button>
-</form>
-<a href="/" class="btn" style="margin-top:18px;">Back to Home</a>
-    
+<!-- Contact Hero -->
+<section class="contact-hero">
+	<h1>Get In Touch</h1>
+	<p>We're here to help. Reach out to us for any questions or concerns.</p>
+</section>
+
+<!-- Contact Methods -->
+<section class="contact-methods">
+	<div class="method-card">
+		<div class="method-icon">📧</div>
+		<h3>Email Support</h3>
+		<p class="method-detail">support@shophub.com</p>
+		<p>Response within 24 hours</p>
+	</div>
+	<div class="method-card">
+		<div class="method-icon">📞</div>
+		<h3>Phone Support</h3>
+		<p class="method-detail">1-800-SHOPHUB (1-800-746-7482)</p>
+		<p>Mon-Fri: 8AM - 8PM EST</p>
+	</div>
+	<div class="method-card">
+		<div class="method-icon">💬</div>
+		<h3>Live Chat</h3>
+		<p class="method-detail">Available on our website</p>
+		<p>Instant support 24/7</p>
+	</div>
+	<div class="method-card">
+		<div class="method-icon">📍</div>
+		<h3>Visit Us</h3>
+		<p class="method-detail">123 Commerce St, NY 10001</p>
+		<p>Mon-Fri: 9AM - 5PM EST</p>
+	</div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+	<div class="form-container">
+		<div class="form-left">
+			<h2>Send Us a Message</h2>
+			<p>Have a question or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+			<form class="contact-form">
+				<div class="form-group">
+					<label for="name">Full Name *</label>
+					<input type="text" id="name" name="name" required placeholder="John Doe">
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email Address *</label>
+					<input type="email" id="email" name="email" required placeholder="john@example.com">
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+				</div>
+
+				<div class="form-group">
+					<label for="subject">Subject *</label>
+					<select id="subject" name="subject" required>
+						<option value="">Select a subject...</option>
+						<option value="order">Order Related</option>
+						<option value="product">Product Question</option>
+						<option value="shipping">Shipping & Delivery</option>
+						<option value="return">Returns & Refunds</option>
+						<option value="feedback">General Feedback</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message *</label>
+					<textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help..."></textarea>
+				</div>
+
+				<div class="form-group checkbox">
+					<input type="checkbox" id="subscribe" name="subscribe">
+					<label for="subscribe">Subscribe to our newsletter for exclusive offers</label>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-large">Send Message</button>
+			</form>
+		</div>
+
+		<div class="form-right">
+			<div class="faq-box">
+				<h3>Frequently Asked Questions</h3>
+				<div class="faq-item">
+					<h4>How long does shipping take?</h4>
+					<p>Standard shipping takes 5-7 business days. Express delivery is available for most items.</p>
+				</div>
+				<div class="faq-item">
+					<h4>What's your return policy?</h4>
+					<p>We offer 30-day returns on most items. Products must be unused and in original condition.</p>
+				</div>
+				<div class="faq-item">
+					<h4>Do you offer international shipping?</h4>
+					<p>Yes! We ship to over 50 countries. Shipping costs vary by location.</p>
+				</div>
+				<div class="faq-item">
+					<h4>How can I track my order?</h4>
+					<p>You'll receive a tracking number via email. Use it on our website to monitor your shipment.</p>
+				</div>
+				<div class="faq-item">
+					<h4>Is my payment secure?</h4>
+					<p>Yes, we use 256-bit SSL encryption to protect all transactions.</p>
+				</div>
+				<a href="#" class="view-all-faq">View All FAQs →</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Office Locations -->
+<section class="office-locations">
+	<h2>Our Locations</h2>
+	<div class="locations-grid">
+		<div class="location">
+			<h3>🇺🇸 New York, USA</h3>
+			<p>123 Commerce Street</p>
+			<p>New York, NY 10001</p>
+			<p>📞 +1 (212) 555-0100</p>
+		</div>
+		<div class="location">
+			<h3>🇬🇧 London, UK</h3>
+			<p>456 Market Lane</p>
+			<p>London, UK EC1A 1AA</p>
+			<p>📞 +44 (0)20 7946 0958</p>
+		</div>
+		<div class="location">
+			<h3>🇩🇪 Berlin, Germany</h3>
+			<p>789 Einkaufs Platz</p>
+			<p>Berlin, Germany 10115</p>
+			<p>📞 +49 (0)30 2555 9999</p>
+		</div>
+		<div class="location">
+			<h3>🇯🇵 Tokyo, Japan</h3>
+			<p>321 Shopping Avenue</p>
+			<p>Tokyo, Japan 100-0005</p>
+			<p>📞 +81-3-1234-5678</p>
+		</div>
+	</div>
+</section>
+
+<!-- Response Time Info -->
+<section class="response-info">
+	<div class="info-content">
+		<h2>Average Response Times</h2>
+		<div class="response-times">
+			<div class="response-item">
+				<p class="time">📧 Email: <strong>24 hours</strong></p>
+			</div>
+			<div class="response-item">
+				<p class="time">💬 Live Chat: <strong>Minutes</strong></p>
+			</div>
+			<div class="response-item">
+				<p class="time">📞 Phone: <strong>Immediate</strong></p>
+			</div>
+		</div>
+	</div>
+</section>
 {% endblock content %}

@@ -4,13 +4,89 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% block title %}Minimal Django{% endblock %}</title>
-	<link rel="stylesheet" href="{% static 'base.css' %}">
+	<title>{% block title %}ShopHub - Premium E-Commerce Platform{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
 	{% block extra_head %}{% endblock %}
 </head>
 <body>
-	<div class="container">
+	<!-- Navigation Header -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="logo">
+				<span class="logo-icon">🛍️</span>
+				<span class="logo-text">ShopHub</span>
+			</div>
+			<div class="nav-search">
+				<input type="text" placeholder="Search products..." class="search-input">
+				<button class="search-btn">🔍</button>
+			</div>
+			<div class="nav-links">
+				<a href="/" class="nav-link">Home</a>
+				<a href="/products" class="nav-link">Shop</a>
+				<a href="/about" class="nav-link">About</a>
+				<a href="/contacts" class="nav-link">Support</a>
+			</div>
+			<div class="nav-icons">
+				<div class="icon-item">
+					<span class="icon">❤️</span>
+					<span class="badge">0</span>
+				</div>
+				<div class="icon-item">
+					<span class="icon">🛒</span>
+					<span class="badge">0</span>
+				</div>
+				<div class="icon-item">
+					<span class="icon">👤</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Main Content -->
+	<div class="page-container">
 		{% block content %}{% endblock %}
 	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-content">
+			<div class="footer-section">
+				<h4>About ShopHub</h4>
+				<p>Your trusted online marketplace for quality products at great prices.</p>
+			</div>
+			<div class="footer-section">
+				<h4>Quick Links</h4>
+				<ul>
+					<li><a href="/about">About Us</a></li>
+					<li><a href="/contacts">Contact Us</a></li>
+					<li><a href="#">Shipping Info</a></li>
+					<li><a href="#">Returns</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Customer Service</h4>
+				<ul>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Track Order</a></li>
+					<li><a href="#">Warranty</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Connect With Us</h4>
+				<div class="social-links">
+					<a href="#" class="social-icon">f</a>
+					<a href="#" class="social-icon">𝕏</a>
+					<a href="#" class="social-icon">📷</a>
+					<a href="#" class="social-icon">in</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 ShopHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+		</div>
+	</footer>
+
+	<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
