@@ -12,6 +12,7 @@ class Product(models.Model):
         ('discontinued', 'Discontinued'),
     )
     name = models.CharField(max_length=100)
+    type = models.CharField(max_length=100, default="General", null=True, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='allProducts/')
     description = models.TextField()
@@ -26,7 +27,7 @@ class ProductReview(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)])
     comment = models.TextField()
-    created_at = models.DateTimeField(default=timezone.now())
+    created_at = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
         return f"Product : {self.product.name} - User : {self.user.username} - Rating : {self.rating} - Comment : {self.comment}"
